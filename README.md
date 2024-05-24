@@ -542,6 +542,35 @@ int main(int argc, char *argv[]) {
 - Menjalankan loop utama FUSE dengan operasi dan mount point yang diberikan.
 
 ### Dokumentasi
+![WhatsApp Image 2024-05-25 at 00 17 05 (3)](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/6ea7be08-f544-44f9-b065-0247204f0b41)
+>Isi folder /portofolio
+
+![WhatsApp Image 2024-05-25 at 00 17 06](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/59cda5ac-d825-41cb-9be1-8bb6b2fcb00b)
+>Menjalankan program inikaryakita.c sebagai fuse_fs
+
+![WhatsApp Image 2024-05-25 at 00 17 06 (1)](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/af43cb6f-2d9c-4b71-975f-8364fefc31a0)
+>Isi folder /portofolio setelah program dijalankan
+
+![WhatsApp Image 2024-05-25 at 00 21 59](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/4172bf08-54c0-4a1c-992c-b851d5bac685)
+>Salah satu foto yang ada di folder /gallery
+
+![WhatsApp Image 2024-05-25 at 00 17 05 (4)](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/a4a683dc-6bf4-4c50-8dcd-c053c573504d)
+>Isi folder /wm setelah program dijalankan
+
+![WhatsApp Image 2024-05-25 at 00 20 07](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/92776174-acdd-48f9-af8f-ab5a0a4ce1cb)
+>Isi file test-adfi.txt yang ada di folder /bahaya
+
+![WhatsApp Image 2024-05-25 at 00 20 22](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/aa7a60c1-8dcd-4b0e-a712-2e9780daa5fa)
+>Isi file test-adfi_reversed.txt yang ada di folder /reversed
+
+![WhatsApp Image 2024-05-25 at 00 26 52](https://github.com/Gandhiert/Sisop-4-2024-MH-IT05/assets/142889150/642e1003-18e9-4a8b-aaad-e7278e2b8189)
+>Isi file script.sh yang ada di dalam folder /bahaya
+
+
+
+
+
+
 
 
 
