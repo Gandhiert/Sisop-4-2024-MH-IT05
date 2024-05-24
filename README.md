@@ -21,8 +21,18 @@ Dalam soal pertama ini, diminta untuk membuat program yang dapat menjalankan tas
 - Me _reverse_ isi dari file .txt yang ber prefix "test"
 - Mengubah permission script.sh agar bisa diakses
 
-### inikaryakita.c
-```
+### Project Structure
+
+- portofolio/ - Direktori dasar untuk proyek ini.
+- gallery/ - Direktori yang berisi gambar JPEG asli.
+- wm/ - Direktori tempat menyimpan gambar yang sudah diberi watermark.
+- bahaya/ - Direktori yang berisi file teks uji dan sebuah skrip.
+- script.sh - File skrip yang akan diatur izinnya.
+- reversed/ - Direktori tempat menyimpan file teks yang dibalik.
+- mountpoint/ - Direktori tempat filesystem FUSE akan dimount.
+
+### Penyelesaian
+```c
 #define FUSE_USE_VERSION 28
 #include <fuse.h>
 #include <stdio.h>
@@ -261,6 +271,11 @@ int main(int argc, char *argv[]) {
     return fuse_main(fuse_argc, (char **) fuse_argv, &operations, NULL);
 }
 ```
+
+### Penjelasan
+
+
+
 
 
 
