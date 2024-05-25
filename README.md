@@ -569,6 +569,94 @@ int main(int argc, char *argv[]) {
 
 ## _Soal 2_
 
+**Dikerjakan oleh Aisha Ayya Ratiandari (5027231056)**
+
+### Bagian Pendahuluan
+
+```c
+#define FUSE_USE_VERSION 31
+
+#include <fuse.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <dirent.h>
+#include <ctype.h>
+
+```
+
+- `#define FUSE_USE_VERSION 31`: Mendefinisikan versi FUSE yang digunakan. Versi 31 berarti FUSE 3.1.
+- `#include <...>`: Mengimpor berbagai pustaka yang diperlukan untuk fungsi-fungsi sistem file, manipulasi string, logging, dan lain-lain.
+1. **Deklarasi Path dan Konfigurasi:**
+    
+    ```c
+    cCopy code
+    const char *base_dir = "/Users/rrrreins/sisop/sensitive";
+    const char *log_file = "/Users/rrrreins/sisop/nyoba4/logs-fuse.log";
+    const char *password = "siesopz";
+    
+    ```
+    
+    - Mendefinisikan path untuk direktori dasar, file log, dan kata sandi.
+2. **Deklarasi Fungsi-fungsi:**
+    
+    ```c
+    cCopy code
+    void decode_base64(const char *input, char *output);
+    void decode_rot13(const char *input, char *output);
+    char *decode_hex(const char *data);
+    char *reverse(const char *data);
+    void createLog(const char *status, const char *tag, const char *info);
+    int checkPass();
+    
+    ```
+    
+    - Deklarasi fungsi-fungsi yang akan digunakan nanti dalam program.
+3. **Implementasi Fungsi-fungsi:**
+    - **`decode_base64`**, **`decode_rot13`**, **`decode_hex`**, **`reverse`**: fungsi-fungsi untuk mendekode data berdasarkan format tertentu.
+    - **`createLog`**: membuat entri dalam file log.
+    - **`checkPass`**: memeriksa kata sandi yang dimasukkan pengguna.
+4. **Fungsi-fungsi FUSE:**
+    - **`xmp_getattr`**: Mendapatkan atribut file.
+    - **`xmp_readdir`**: Membaca direktori.
+    - **`xmp_read`**: Membaca file.
+    - **`fuse_main`**: Fungsi utama untuk menjalankan FUSE.
+5. **Fungsi Utama:**
+    
+    ```c
+    cCopy code
+    int main(int argc, char *argv[]) {
+        if (argc < 2) {
+            fprintf(stderr, "Usage: %s <mountpoint>\n", argv[0]);
+            return 1;
+        }
+        return fuse_main(argc, argv, &xmp_oper, NULL);
+    }
+    
+    ```
+    
+    - Memeriksa jumlah argumen yang diberikan.
+    - Memulai operasi FUSE.
+
+### Dokumentasi
+
+![Screen Shot 2024-05-25 at 21.48.04.png](lapresnya%20c8a8b6fe49e24e73b79c62a75a6ac1ca/Screen_Shot_2024-05-25_at_21.48.04.png)
+
+Enkripsi untuk folder pesan berhasil
+
+![Screen Shot 2024-05-25 at 21.48.21.png](lapresnya%20c8a8b6fe49e24e73b79c62a75a6ac1ca/Screen_Shot_2024-05-25_at_21.48.21.png)
+
+Enkripsi untuk folder pesan (file reverse) berhasil
+
+![Screen Shot 2024-05-25 at 21.52.09.png](lapresnya%20c8a8b6fe49e24e73b79c62a75a6ac1ca/Screen_Shot_2024-05-25_at_21.52.09.png)
+
+Pembuatan password tidak berhasil, folder tidak bisa dibuka
 
 ## _Soal 3_
 ### Dikerjakan Oleh Gandhi Ert Julio (5027231081)
